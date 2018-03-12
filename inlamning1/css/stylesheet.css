@@ -1,0 +1,67 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#regis {
+    width: 26em;
+    height: 500x;
+    margin-top: 10;
+    margin: 0 auto;
+    background-color: palegreen;
+    display: flex;
+    flex-direction: column;
+
+}
+
+input{
+
+    margin: 5px;
+}
+
+.pic {
+    margin-left: 35em;
+}
+
+#products {
+    background-color: #eee;
+}
+#first, #second, #third {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    background-color: khaki;
+    margin:  10px auto;
+}
+header {
+    background-color: black;
+    height: 150px;
+}
+header  h1 {
+    text-align: center;
+    color: beige;
+   
+}
+body {
+    width: 800px;
+    margin: 0 auto;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+header ul li {
+    background-color: blueviolet;
+    width: 100px;
+    height: 50px;
+    list-style: none;
+    
+}
+header ul li a {
+    text-decoration: none;
+    color: aliceblue;
+    margin: 5px;
+}
+
+#regis {
+    height: 500px;
+    padding: 50px;
+}
