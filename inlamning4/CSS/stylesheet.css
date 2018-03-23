@@ -1,0 +1,86 @@
+header {
+    background-color: #eee;
+    text-align: center;
+}
+
+.nav {
+    background-color: aquamarine;
+}
+
+.nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+.nav ul li {
+    margin: 10px;
+}
+
+.productBox {
+    -webkit-box-shadow: 28px 35px 114px -1px rgba(196, 196, 196, 1);
+    -moz-box-shadow: 28px 35px 114px -1px rgba(196, 196, 196, 1);
+    box-shadow: 28px 35px 114px -1px rgba(196, 196, 196, 1);
+    background: #eee;
+    width: 500px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.productName {
+    text-align: center;
+    font-size: 25px;
+    z-index: -1;
+}
+
+.panel {
+    -webkit-box-shadow: 28px 35px 114px -1px rgba(196, 196, 196, 1);
+    -moz-box-shadow: 28px 35px 114px -1px rgba(196, 196, 196, 1);
+    box-shadow: 28px 35px 114px -1px rgba(196, 196, 196, 1);
+    text-decoration: none;
+    border: 1px solid black;
+    text-align: center;
+    color: white;
+    background-color: tomato;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+}
+
+.userName {
+    width: 150px;
+    margin: 10px;
+}
+
+.productReview {
+    width: 300px;
+    height: 200px;
+}
+
+.starRating {
+    color: wheat;
+    height: 25px;
+    width: 120px;
+    padding: 2px 10px;
+    margin: 0 auto;
+}
+
+.star {}
+
+.starred {
+    background-color: yellow;
+}
+
+.starred-chosen {
+    background-color: green;
+}
+.contianer {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+}

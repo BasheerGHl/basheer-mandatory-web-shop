@@ -65,3 +65,7 @@ header ul li a {
     height: 500px;
     padding: 50px;
 }
+
+.err {
+    border: 1px solid red;
+}
