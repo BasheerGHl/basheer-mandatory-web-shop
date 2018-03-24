@@ -5,7 +5,7 @@ nameInput.setAttribute("id", "firstName");
 nameInput.setAttribute("class", "styleFirstName");
 
 nameInput.setAttribute("placeholder", "Type first Name");
- document.getElementById("regis").appendChild(nameInput);
+document.getElementById("regis").appendChild(nameInput);
 
 
 
@@ -58,38 +58,77 @@ document.getElementById("regis").appendChild(name7Input);
 var name8Input = document.createElement("input");
 name8Input.setAttribute("type", "submit");
 name8Input.setAttribute("value", " requist ");
-name8Input.setAttribute("id","sendingData");
+name8Input.setAttribute("id", "sendingData");
 
 document.getElementById("regis").appendChild(name8Input);
 
 var myInputs = document.getElementById("inputs");
+let col = {
+    firstName: document.getElementById("firstName"),
+    lastName: document.getElementById("lastName"),
+    email: document.getElementById("email"),
+    teleNbr: document.getElementById("telefonNbr"),
+    adress: document.getElementById("adress"),
+    city: document.getElementById("city"),
+    zipCode: document.getElementById("zipCode"),
 
-let firstName = document.getElementById("firstName").value;
-let lastName = document.getElementById("lastName").value;
-let email = document.getElementById("email").value;
-let teleNbr = document.getElementById("telefonNbr").value;
-let adress = document.getElementById("adress").value;
-let city = document.getElementById("city").value;
-let zipCode = document.getElementById("zipCode").value;
+}
 let btn = document.getElementById("sendingData");
-
 let onlyLetters = /^[A-ZÅÄÖa-zåäö ]+$/;
 let telefoneValidation = /^\d{10}$/;
 let emailValidation = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-let zipCodeValidation = /^\d{5}(-\d{4})?(?!-)$/;
-let err = false;
-btn.addEventListener("click", formValidation);
+let zipCodeValidation = /^\d{5}  (-\d{4})?(?!-)$/;
+let hasError = false;
 
-function formValidation() {
-    
 
-     if (!onlyLetters.test(firstName.value)) {
-         firstName.classList.add("err");
-         return false;
-     }else {
-          firstName.classList.remove("err");
-          return true;
-     }
-}
+btn.addEventListener("click",function formValidation(event){
+    event.preventDefault()
 
-formValidation();
+
+ if(col.firstName.value.length === 0) {
+        document.getElementById("good").innerHTML = "first name field is mandatory" 
+        hasError = false;
+    }else {
+        document.getElementById("good").innerHTML = "good";
+    }
+
+    if(col.lastName.value.length === 0) {
+        document.getElementById("good").innerHTML = "last name field is mandatory" 
+        hasError = false;
+    }else {
+        document.getElementById("good").innerHTML = "good";
+    }
+
+    if (emailValidation === col.email.value) {
+        document.getElementById("good").innerHTML = "email field is mandatory" 
+    }else{
+        document.getElementById("good").innerHTML = "good";
+
+    }
+    if(col.teleNbr.value.length <= 10) {
+        document.getElementById("good").innerHTML = "telefon field is mandatory"
+        
+    }else {
+        document.getElementById("good").innerHTML = "good";
+    }
+    if(col.adress.value.length === 0) {
+        document.getElementById("good").innerHTML = "telefon field is mandatory"
+    }else {
+        document.getElementById("good").innerHTML = "good";
+    }
+    if(col.city.value.length === 0) {
+        document.getElementById("good").innerHTML = "telefon field is mandatory"
+    }else {
+        document.getElementById("good").innerHTML = "good";
+    }
+    if(col.zipCode.value.length < 4) {
+        document.getElementById("good").innerHTML = "telefon field is mandatory"
+    }else {
+        document.getElementById("good").innerHTML = "good";
+    }
+
+});
+
+ 
+  
+   
