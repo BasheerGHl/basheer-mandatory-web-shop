@@ -61,15 +61,17 @@ header ul li a {
     margin: 5px;
 }
 
-#regis {
-    height: 500px;
-    padding: 50px;
+
+
+
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 50em;
+    margin: 20px auto;
 }
 
-.err {
-    border: 3px solid red;
-}
-
-.cor {
-    border: 3px solid black
+input {
+    width: 400px;
 }

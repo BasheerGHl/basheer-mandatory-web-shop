@@ -6,7 +6,7 @@ let productsData = [
       image: "https://www.mizunousa.com/images/set_mizuno/en_us/local/division-pages/Volleyball/ExpandedDrawerAsset_Update_0005_Men_Footwear.png?h=150&w=300&la=en",
       description: "Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan",
       price: 1700,
-      review: "products.html",
+     
   
   },
     {
@@ -15,7 +15,7 @@ let productsData = [
       image: "https://www.mizunousa.com/images/set_mizuno/en_us/local/division-pages/Running/ExpandedDrawerAsset_Update_Womens_WaveDaichi---Trail-Feature.png",
       description: "Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan",
       price: 2000,
-      review: "products.html",
+     
   
   },
     {
@@ -24,7 +24,7 @@ let productsData = [
       image: "https://www.mizunousa.com/images/set_mizuno/en_us/local/division-pages/Volleyball/ExpandedDrawerAsset_Update_0003_Youth_Footwear.png?h=150&w=300&la=en",
       description: "Lorem Ipsum är en utfyllnadstext från tryck- och förlagsindustrin. Lorem ipsum har varit standard ända sedan ",
       price: 1600,
-      review: "products.html",
+    
   
   }
   ];
@@ -47,7 +47,7 @@ let productsData = [
       <p class="productDescription"> ${productsData[i].description} </p>
       <p class="productPrice"> ${productsData[i].price} Kr</p>
       <button class="buyBtn" id="${productsData[i].id}"> Buy </button>
-      <a href="${productsData[i].review}" class="setComment panel">review</a>
+      <a href="#" class="setComment panel">review</a>
     </div>
   
   `;
@@ -76,19 +76,13 @@ let productsData = [
   }
 
 
-/*
-  for(let i = 0; i < productsData.length; i++){
-    
-    main.innerHTML += `
-   <div class="productBox">
-     <img class="productsImage" src="${productsData[i].image}" />
-   </div>
- `;
- }
-    */
+
+const switchPage = function () {
+      
+    $('.setComment').on('click',function () {
+        $('.wrapper').hide();
+    })
+}
 
 
-  
-
-
-  
+switchPage();
